@@ -1,57 +1,288 @@
 {% extends "layout.html" %}
 
-{% block content %}
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="/images/lang-logo.png">
-    </a>
-    <h1>Getting Started with PHP on Heroku</h1>
-    <p>This is a sample PHP application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-php"><span class="glyphicon glyphicon-flash"></span> Getting Started with PHP</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/php-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-php" class="alert-link">Getting Started with PHP on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/php-getting-started">Heroku Button</a> on the repository.</li>
 
-        <li>When Heroku received the source code, it fetched all the dependencies in the <a href="https://github.com/heroku/php-getting-started/blob/master/composer.json">composer.json</a>, creating a deployable slug.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-      <ul>
-        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-php">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
-        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
-        <ul>
-          <li><code>git clone https://github.com/heroku/php-getting-started.git</code> - this will create a local copy of the source code for the app</li>
-          <li><code>cd php-getting-started</code> - change directory into the local source code repository</li>
-          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
-          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-php#push-local-changes">deploy changes</a> to Heroku</li>
-        </ul>
-      </ul>
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-php">Getting Started with PHP on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-php">Deploying PHP Apps on Heroku</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-  </div>
+{% block content %}
+<!-- Preloader -->
+<div id="preloader">
+	<div id="status"></div>
 </div>
+<!--wrapper start-->
+<div class="wrapper noGap" id="wrapper">
+
+<!--Header start -->
+<header>
+  	<!--menu start-->
+    <div class="menu">
+    <!-- <a href="#" class="nav-icon" id="nav-show"><i class="fa fa-bars"></i></a>
+      <div class="navbar-wrapper"> -->
+        <!-- <div class="container">
+          <div class="navwrapper">
+            <div class="navbar navbar-inverse navbar-static-top">
+              <div class="container">
+              	<div class="logo">logo</div>
+                <div class="navArea"><a href="#" class="closeMenu"><i class="fa fa-times"></i></a>
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                     <a class="navbar-brand" href="#">Menu</a> </div>
+                    <div class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                        <li class="menuItem active"><a href="#wrapper">Home</a></li>
+                        <li class="menuItem"><a href="#aboutus">About Me</a></li>
+                        <li class="menuItem"><a href="#skillset">Skills</a></li>
+                        <li class="menuItem"><a href="#experience">Experience</a></li>
+                        <li class="menuItem"><a href="#education">Education</a></li>
+                        <li class="menuItem"><a href="#ourwork">Portfolio</a></li>
+                        <li class="menuItem"><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Navbar -->
+        </div>
+      </div>
+    </div>
+    <!--menu end-->
+    <!--banner start-->
+    <div class="banner row" id="banner">
+    <div class="bannerText">
+        <!-- <h1>I'm harada kazunari</h1>
+        <h3>Design &amp; Build Beautiful Crafted Web Experiences</h3> -->
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" style="height:100%">
+        <!--background slide show start-->
+        <div class="slide">
+          <img src="images/header-image/image01.png" alt="image01"> </div>
+        <div class="slide">
+          <img src="images/header-image/image02.jpg" alt="image01"> </div>
+        <!--background slide show end-->
+      </div>
+    </div>
+    <!--banner end-->
+
+  </header>
+  <!--Header end -->
+
+ <!--about us start-->
+  <section class="aboutus" id="aboutus">
+    <div class="container">
+      <div class="row">
+       <div class="col-md-12">
+      	<div class="heading">
+        <h2>About me</h2>
+        <!-- <h3>A small introduction about my self</h3>         -->
+      </div>
+      </div>
+       </div>
+      <div class="row">
+      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right media"><img src="images/jhon-img.png" alt="" style="width: 300px; height: auto;"></div>
+      	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left media">
+        	<h5 style="font-size: 25px;">原田 運也</h5>
+            <h4>
+              久留米大学 商学部 スカラシップ生 / プロジェクトマネジメント専攻 / <br>
+器楽部 副部長 /
+            </h4>
+            <p style="font-size: 16px;">
+              &emsp;大学二年次の授業でWebサービス開発に触れたことで、プログラミングに興味をもち、pythonやPhpをはじめとした言語を勉強中で、プログラミング教室の運営を地元で行なっています。簡単なecサイトや、web上での会計アプリ、スタジオ予約アプリ等を作ってきました。<br>&emsp;現在はPythonでfx自動売買botを制作したり、ボランティアチームに参加し、サイト制作や企画の計画•運営等を行なったりしています。
+            </p>
+            <p>
+
+            </p>
+            <!-- <p><a role="button" class="btn btn-primary btn-lg">Download Printable Resume</a></p> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--about us end-->
+  <!--Skillset start -->
+  <section id="skillset" class="skillset">
+  	<div class="container">
+    	<div class="row">
+        	<div class="col-md-12">
+               <div class="heading">
+                <h2>Skills</h2>
+                <!-- <h3>I can say i’m quite good at</h3>         -->
+              </div>
+            </div>
+            <div class="col-md-12">
+            	<!-- <div class="col-md-6 col-sm-12 media">
+                	<p>
+
+                  </p>
+                </div> -->
+            	<div class="col-sm-12">
+                <div style="width: 60%; margin: 0 auto;">
+                  <div class="skillbar clearfix " data-percent="87%" >
+                      <div class="skillbar-title"><span>Web design</span></div>
+                      <div class="skillbar-bar"></div>
+                      <div class="skill-bar-percent"></div>
+                  </div> <!-- End Skill Bar -->
+
+                  <!-- <div class="skillbar clearfix " data-percent="86%">
+                      <div class="skillbar-title"><span>illustration</span></div>
+                      <div class="skillbar-bar"></div>
+                      <div class="skill-bar-percent"></div>
+                  </div> End Skill Bar -->
+
+                  <div class="skillbar clearfix " data-percent="80%">
+                      <div class="skillbar-title"><span>HTML / CSS</span></div>
+                      <div class="skillbar-bar"></div>
+                      <div class="skill-bar-percent"></div>
+                  </div> <!-- End Skill Bar -->
+
+                  <div class="skillbar clearfix " data-percent="40%">
+                      <div class="skillbar-title"><span>javaScript</span></div>
+                      <div class="skillbar-bar"></div>
+                      <div class="skill-bar-percent"></div>
+                  </div> <!-- End Skill Bar -->
+
+                  <div class="skillbar clearfix " data-percent="75%">
+                      <div class="skillbar-title"><span>php</span></div>
+                      <div class="skillbar-bar"></div>
+                      <div class="skill-bar-percent"></div>
+                  </div> <!-- End Skill Bar -->
+
+                  <div class="skillbar clearfix " data-percent="32%">
+                      <div class="skillbar-title"><span>python</span></div>
+                      <div class="skillbar-bar"></div>
+                      <div class="skill-bar-percent"></div>
+                  </div> <!-- End Skill Bar -->
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </section>
+    <section class="contactDetails">
+    <div class="container">
+    <div class="heading">
+        <h2>email</h2>
+        <h3>Please feel free if you would like to have a chat.</h3>
+      </div>
+      <!--contact form start-->
+      <div class="row media">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 conForm text-center">
+        <div id="message"></div>
+        <form method="post" action="php/contact.php" name="cform" id="cform">
+          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-8 col-lg-8" placeholder="Your name" >
+          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-8 col-lg-8 noMarr" placeholder="Your email" >
+          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-8 col-lg-8" placeholder="Your message"></textarea>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><input type="submit" id="submit" name="send" class="submitBnt" value="Send message"></div>
+          <div id="simple-msg"></div>
+        </form>
+      </div>
+      </div>
+      <!--contact form end-->
+    </div>
+  </section>
+  <!--contact end-->
+
+  <!--footer start-->
+  <section class="footer" id="footer">
+    <div class="container">
+      <ul>
+        <li><a href="https://twitter.com/prog_harada?lang=ja"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100031652443406"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <!-- <li><a href="#"><i class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-vimeo-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li> -->
+      </ul>
+    </div>
+    <p class="text-center"><a href="#wrapper" class="gototop"><i class="fa fa-chevron-up fa-2"></i></a></p>
+  </section>
+  <!--footer end-->
+  </div>
+<!--wrapper end-->
+
+<!--modernizr js-->
+<script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+<!--jquary min js-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!--for placeholder jquery-->
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+
+<!--for header jquery-->
+<script type="text/javascript" src="js/stickUp.js"></script>
+<script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+jQuery(function($) {
+$(document).ready( function() {
+  //enabling stickUp on the '.navbar-wrapper' class
+	$('.navbar-wrapper').stickUp({
+		parts: {
+		  0: 'banner',
+		  1: 'aboutus',
+		  2: 'skillset',
+		  3: 'experience',
+		  4: 'education',
+		  5: 'ourwork',
+		  6: 'contact'
+		},
+		itemClass: 'menuItem',
+		itemHover: 'active',
+		topMargin: 'auto'
+		});
+	});
+
+
+});
+</script>
+<script>
+	$('#banner').superslides({
+	  animation: 'fade',
+	  play: 5000
+	});
+</script>
+
+<!--for portfolio jquery-->
+<script src="js/jquery.isotope.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" id="theme" href="css/jquery-ui-1.8.16.custom.css">
+<link type="text/css" rel="stylesheet" href="css/lightbox.min.css">
+<script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.rlightbox.js"></script>
+
+<!--contact form js-->
+<script type="text/javascript" src="js/jquery.contact.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+					scrollwheel: false,
+                    // How you would like to style the map.
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.6700, -73.9400),
+                    map: map,
+                    title: 'Hello!'
+                });
+            }
+        </script>
 
 {% endblock %}
