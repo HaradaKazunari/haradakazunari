@@ -2,10 +2,10 @@ body{
   background-color: #111;
   color: #eee;
   height: 100%;
+  font-size: 18px;
 }
-h1{
-  font-family: 'Zhi Mang Xing', cursive;
-  font-size: 10vw;
+p{
+  font-family: 'Single Day', cursive;
 }
 .fade_off {
     opacity: 0;
@@ -90,9 +90,8 @@ h1{
   #about .naka .text{
     order:2;
     margin: 0;
-  }
-  #about .text{
     text-align: center;
+    font-size: 16px;
   }
 }
  
