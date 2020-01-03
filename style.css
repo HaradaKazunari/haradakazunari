@@ -1,0 +1,107 @@
+body{
+  background-color: #111;
+  color: #eee;
+  height: 100%;
+}
+h1{
+  font-family: 'Zhi Mang Xing', cursive;
+  font-size: 10vw;
+}
+.fade_off {
+    opacity: 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 1s;
+}
+.fade_on {
+    opacity: 1;
+}
+.bg{
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: center center;
+}
+.top{
+  width: 100%;
+  height:100vh;
+}
+.inner{
+  display:inline-block;
+}
+.tablecell{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height:100vh;
+}
+.outline{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+#about .naka{
+  display: flex;
+}
+#about .naka .text{
+  flex:2;
+  margin-right: 2rem;
+}
+#about .naka .img{
+  flex:1;
+  text-align:right;
+}
+#about img{
+  width: 25vw;
+  max-width: 250px;
+  height: auto;
+}
+#about .icons{
+  margin-top: 2rem;
+}
+.icons ul{
+  display: flex;
+  justify-content: space-between;
+  padding:0;
+}
+.icons li{
+  list-style-type: none;
+  font-size: 10vw;
+}
+
+@media screen and (max-width:768px){
+  p{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:660px){
+  #about .naka{
+    flex-direction:column;
+  }
+  #about .naka .img{
+    order:1;
+    text-align:center;
+    margin-bottom: 2rem;
+  }
+  #about .naka .text{
+    order:2;
+  }
+  #about .text{
+    text-align: center;
+  }
+}
+ 
+
+@media screen and (max-width:480px){
+  p{
+    font-size: 12px;
+  }
+  #about .naka{
+    display: block;
+  }
+}
