@@ -43,7 +43,10 @@ h1{
   margin: 0 auto;
 }
 
-
+#top img{
+  width:100px;
+  height: auto;
+}
 
 #about .naka{
   display: flex;
