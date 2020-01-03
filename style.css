@@ -7,6 +7,9 @@ body{
 p{
   font-family: 'Single Day', cursive;
 }
+#copyright span{
+  font-size:12px;
+}
 .fade_off {
     opacity: 0;
     -webkit-transition: all 1s;
