@@ -98,6 +98,9 @@ h1{
  
 
 @media screen and (max-width:480px){
+  #top .top{
+    margin-bottom:2rem;
+  }
   #about .naka .img{
     width:150px;  
     text-align:center;
