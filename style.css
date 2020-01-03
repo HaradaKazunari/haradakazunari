@@ -1,7 +1,6 @@
 body{
   background-color: #111;
   color: #eee;
-  height: 100%;
   font-size: 18px;
 }
 p{
@@ -21,12 +20,15 @@ p{
 .fade_on {
     opacity: 1;
 }
-.bg{
-    min-height: 100%;
+
+.back{
+    width:100vw;
+    height: 100vh;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: repeat;
     background-position: center center;
+    position:fixed;
 }
 .top{
   width: 100%;
@@ -46,6 +48,12 @@ p{
   margin: 0 auto;
 }
 
+#about .top{
+  height:auto !important;
+}
+#abou .tablecell{
+  height:auto !important;
+}
 #top img{
   max-width: 100px;
   height: auto;
@@ -66,7 +74,7 @@ p{
 #about img{
   width: 25vw;
   max-width: 250px;
-  height: auto;
+  height: auto !important;
 }
 #about .icons{
   margin-bottom:2rem;
