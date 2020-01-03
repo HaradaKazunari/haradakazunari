@@ -30,6 +30,30 @@
 		
 		var element = this;
 		
+    var today = new Date();
+
+    var now_month = today.getMonth()+1;
+    var src;
+    var maxsize;
+    var minsize;
+console.log(now_month);
+   if(now_month >= 12 || now_month <= 2){
+      src = "img/yuki.png";
+      maxsize = 20;
+      minsize = 5;
+    }else if(now_month <= 4){
+      src = "img/sakura.png";
+      maxsize = 20;
+      minsize = 10;
+    }else if(now_month <= 5){
+      src = "img/ha.png";
+      maxsize = 35;
+      minsize = 10;
+    }else if(now_month <= 10){
+      src = "img/momizi.png";
+      maxsize = 35;
+      minsize = 10;
+    }
 		// random fuction for generating random vals
 		random = function random(min, max){
 			return Math.round(min + Math.random()*(max-min)); 
@@ -46,9 +70,26 @@
 			this.speed = _speed;
 			this.step = 0,
 			this.stepSize = random(1,10) / 100;
-			
-			var flakeMarkup = "<div id='flake-" + this.id + "' style='width: " + this.size + "px; height: " + this.size + "px; background: " + options.flakeColor + "; position: absolute; top: " + this.y + "px; left:" + this.x + "px; font-size: 0px; z-index: " + options.flakeIndex + ";'></div>";
-			
+      
+      var angle = Math.round(Math.random()*360);
+      var flakeMarkup = "<img src='" + src + "' id='flake-" + this.id;
+
+      flakeMarkup += "' style='width: " + this.size + "px; height: " + this.size + "px;";
+
+      flakeMarkup += "; position: absolute; top: " + this.y + "px; left:" + this.x +
+
+      "px; font-size: 0px; z-index: " + options.flakeIndex;
+
+
+
+      flakeMarkup += "; -moz-transform:rotate(" + angle + "deg);";
+
+      flakeMarkup += "-webkit-transform:rotate(" + angle + "deg);";
+
+      flakeMarkup += "transform:rotate(" + angle + "deg);";
+
+      flakeMarkup += "' />";
+
 			if($(element).get(0).tagName === $(document).get(0).tagName){
 				$('body').append(flakeMarkup);
 			}else{
@@ -67,6 +108,9 @@
 				
 				this.element.style.top = this.y + 'px';
 				this.element.style.left = this.x + 'px';
+
+         this.element.style.transform = 'rotateY('+(this.x+this.y)%360 + 'deg)';
+         this.element.style.transform = 'rotateX('+(this.x+this.y)%360 + 'deg)';
 				
 				this.step += this.stepSize;
 				this.x += Math.cos(this.step);
@@ -85,7 +129,7 @@
 				this.speed = random(options.minSpeed, options.maxSpeed);
 			}
 		}
-	
+			
 		// plugin vars
 		var flakes = [],
 			flakeId = 0,
@@ -93,13 +137,13 @@
 			elHeight = $(element).height(),
 			elWidth = $(element).width(),
 			defaults = {
-				flakeCount : 120,
+				flakeCount : 100,
 				flakeColor : '#ffffff',
 				flakeIndex: 999999,
-				minSize : 1,
-				maxSize : 3,
+				minSize : minsize,
+				maxSize : maxsize,
 				minSpeed : 2,
-				maxSpeed : 3
+				maxSpeed : 8
 				},
 			options = $.extend(defaults, options);		
 		
