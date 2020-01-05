@@ -29,6 +29,7 @@ p{
     background-repeat: repeat;
     background-position: center center;
     position:fixed;
+    z-index: -1;
 }
 .top{
   width: 100%;
