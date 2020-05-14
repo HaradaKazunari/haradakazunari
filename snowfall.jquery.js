@@ -137,7 +137,7 @@ console.log(now_month);
 			elHeight = $(element).height(),
 			elWidth = $(element).width(),
 			defaults = {
-				flakeCount : 100,
+				flakeCount : 20,
 				flakeColor : '#ffffff',
 				flakeIndex: 999999,
 				minSize : minsize,

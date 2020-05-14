@@ -3,19 +3,28 @@ body{
   color: #eee;
   font-size: 18px;
 }
+h3{
+  margin-bottom: 7rem;
+}
 p{
   font-family: 'Single Day', cursive;
+}
+a{
+  color:#F4D69A;
+}
+a:hover{
+  color:#967B4D;
 }
 #copyright span{
   font-size:12px;
 }
 .fade_off {
     opacity: 0;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -ms-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
 }
 .fade_on {
     opacity: 1;
@@ -31,88 +40,147 @@ p{
     position:fixed;
     z-index: -1;
 }
-.top{
-  width: 100%;
-  height:100vh;
-}
-.inner{
-  display:inline-block;
-}
-.tablecell{
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-  height:100vh;
-}
-.outline{
-  width: 80%;
-  margin: 0 auto;
+
+.window{
+  width:80%;
+  max-width:700px;
+  margin:0 auto;
+  min-height:100vh;
+  height:auto;
 }
 
-#about .top{
-  height:auto !important;
+.item{
+  width:100%;
+  display:flex;
+  justify-content: space-between;
 }
-#abou .tablecell{
-  height:auto !important;
+
+.text{
+  width:60%;
+  padding-right:20px;
 }
+
+
 #top img{
   max-width: 100px;
   height: auto;
 }
+#top .image{
+  width:100%;
+  height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
 
-#about .naka{
-  display: flex;
-}
-#about .naka .text{
-  flex:2;
-  margin-right: 2rem;
-  margin-bottom:2rem;
-}
-#about .naka .img{
-  flex:1;
-  text-align:right;
-}
+
 #about img{
-  width: 25vw;
-  max-width: 250px;
-  height: auto !important;
+  width:230px;
+  height:230px;
 }
-#about .icons{
-  margin-bottom:2rem;
+
+
+#product{
+  margin-top:12rem;
+  margin-bottom:12rem;
 }
-.icons ul{
+#product img{
+  max-width:340px;
+  width:100%;
+}
+#product p{
+  margin: 0;
+  padding-right:20px;
+}
+#product .item:not(:first-of-type){
+  margin-top:5rem;
+}
+#product .text{
+  position: relative;
+}
+#product .detail{
+  position:absolute;
+  bottom: 0;
+}
+
+#contact ul {
+  list-style:none;
   display: flex;
-  justify-content: space-between;
   padding:0;
 }
-.icons li{
-  list-style-type: none;
-  font-size: 10vw;
+#contact li{
+  font-size:50px;
+  padding-right: 30px;
+}
+#contact .window{
+  position: relative;
+}
+#contact .icons{
+  margin-top:3rem;
+}
+#contact .window #buttom{
+  position: absolute;
+  bottom: 0;
 }
 
-@media screen and (max-width:660px){
-  #about .naka{
+#contact #buttom{
+  width:100%;
+}
+
+@media screen and (max-width:768px){
+  h3{
+    margin-bottom:5rem;
+  }
+  .item{
+    display:block;
+  }
+  .text{
+    width:100%;
+    padding:0;
+  }
+  .window{
+    text-align:center;
+  }
+
+  #about .image{
+    width:100%;
+    display:flex;
+    justify-content: center;
+  }
+
+  #about .item{
+    display:flex;
     flex-direction:column;
   }
-  #about .naka .img{
-    order:1;
-    text-align:center;
-    margin-bottom: 2rem;
-  }
-  #about .naka .text{
+  #about .text{
     order:2;
-    margin: 0;
-    text-align: center;
-    font-size: 16px;
   }
-}
- 
+  #about img{
+    order:1;
+    margin-bottom:3rem;
+  }
 
-@media screen and (max-width:480px){
-  #about .naka img{
-    width:130px;  
+  #product p{
+    padding-right:0;
   }
-  #about .naka .text{
-    margin: 0;
+  #product .text{
+    position: static;
+    margin:2rem 0;
+  }
+  #product .detail{
+    position:static;
+  }
+  #product .item{
+    width:360px;
+    margin:0 auto;
+  }
+  #contact ul {
+    width:70%;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+  }
+  #contact li{
+    padding:0;
   }
 }
