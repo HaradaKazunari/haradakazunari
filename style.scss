@@ -133,7 +133,7 @@ a {
 }
 
 #contact {
-  margin-top: 6rem;
+  margin-top: 8rem;
   ul {
     list-style: none;
     display: flex;
@@ -226,6 +226,9 @@ a {
   #Project{
     .example{
       display:block;
+      a{
+        margin-bottom: 2rem;
+      }
     }
   }
 
