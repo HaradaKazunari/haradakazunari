@@ -1,11 +1,12 @@
 body {
   background-color: #000;
-  color: #fef9f9;
+  color: #f9fef9;
   font-size: 18px;
 }
 
 h3 {
   margin-bottom: 7rem;
+  border-bottom: 1px solid currentcolor;
 }
 
 p {
