@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <div class="declaration">
+          <h1>じゃんけん</h1>
+        </div>
+        <div class="judg text-center">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="cpu_hand text-center">
+
+          <div class="title">
+            <h2>CPU</h2>
+          </div>
+          <div class="cpu_img_anime">
+          </div>
+          <div class="cpu_img img">
+          </div>
+
+        </div><!-- cpu_hand -->
+      </div><!-- col-6 -->
+
+      <div class="col-6">
+        <div class="player_hand text-center">
+          <div class="title  mb-4">
+            <h2>YOUR</h2>
+          </div>
+          <div class="player_img img">
+          </div>
+        </div>
+      </div><!-- col-6 -->
+      <div class="col-12">
+          <div class="player_button text-center">
+            <h3 class="jud"></h3>
+            <h3 class="player_button_title">選択してね</h3>
+            <div class="player_hand_button">
+              <button data-hand="1" class="player btn btn-primary"  >グー</button>
+              <button data-hand="2" class="player btn btn-primary ml-3"  >チョキ</button>
+              <button data-hand="3" class="player btn btn-primary ml-3"  >パー</button>
+            </div>
+          </div>
+      </div>
+    </div><!-- row -->
+
+  </div><!-- container-fluid -->
+
+  <script src="app.js"></script>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
