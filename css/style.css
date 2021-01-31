@@ -12,6 +12,7 @@ h3 {
 
 a {
   color: #F4D69A;
+  transition: 0.3s;
 }
 a:hover {
   color: #967B4D;
@@ -104,14 +105,19 @@ a:hover {
   bottom: 0;
 }
 
+#Project .ttl {
+  margin-top: 4rem;
+}
 #Project .buttons {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 3rem;
 }
 #Project .buttons a {
   border: 1px solid Currentcolor;
   border-radius: 6px;
   padding: 1rem;
+  margin: 1.5rem 0;
   margin-right: 2rem;
 }
 #Project .buttons a:hover {

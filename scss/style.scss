@@ -13,7 +13,7 @@ p {
 }
 a {
   color: #F4D69A;
-
+  transition:0.3s;
   &:hover {
     color: #967B4D;
   }
@@ -115,13 +115,18 @@ a {
 }
 
 #Project{
+  .ttl{
+    margin-top: 4rem;
+  }
   .buttons{
     display:flex;
-    margin-bottom: 3rem;
+    flex-wrap:wrap;
+    margin-bottom:3rem;
     a{
       border: 1px solid Currentcolor;
       border-radius: 6px;
       padding: 1rem;
+      margin: 1.5rem 0;
       margin-right: 2rem;
       &:hover{
         text-decoration: none;
