@@ -104,17 +104,17 @@ a:hover {
   bottom: 0;
 }
 
-#Project .example {
+#Project .buttons {
   display: flex;
   margin-bottom: 3rem;
 }
-#Project .example a {
+#Project .buttons a {
   border: 1px solid Currentcolor;
   border-radius: 6px;
   padding: 1rem;
   margin-right: 2rem;
 }
-#Project .example a:hover {
+#Project .buttons a:hover {
   text-decoration: none;
 }
 
